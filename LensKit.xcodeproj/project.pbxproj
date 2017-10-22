@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		1E2F8A3E1F9CC6C9000D4AAF /* Lenser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lenser.swift; sourceTree = "<group>"; };
+		1E2F8A421F9CD396000D4AAF /* lens.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = lens.stencil; sourceTree = "<group>"; };
 		"LensKit::LensKit::Product" /* LensKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LensKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"LensKit::LensKitTests::Product" /* LensKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = LensKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
@@ -77,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2F8A401F9CD298000D4AAF /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				1E2F8A421F9CD396000D4AAF /* lens.stencil */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,15 +113,15 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_11 /* Tests */,
+				1E2F8A401F9CD298000D4AAF /* Templates */,
 				OBJ_15 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -199,7 +208,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

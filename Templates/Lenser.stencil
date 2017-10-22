@@ -1,0 +1,11 @@
+{% for type in types.implementing.Lenser %}
+extension {{ type.name }} {
+{% for variable in type.variables %}
+  static let {{ variable.name }}Lens = Lens<{{type.name}}, {{variable.typeName}}>(
+    get: { $0.{{variable.name}} },
+    set: { {{type.name|lowercase}}, {{variable.name}} in
+       {{type.name}}({% for argument in type.variables %}{{argument.name}}: {% if variable.name == argument.name %}{{variable.name}}{% else %}{{type.name|lowercase}}.{{argument.name}}{% endif %}{% if not forloop.last %}, {% endif %}{% endfor %})
+    }
+  ){% endfor %}
+}
+{% endfor %}
