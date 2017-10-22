@@ -22,9 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		1E2F8A3F1F9CC6C9000D4AAF /* Lenser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F8A3E1F9CC6C9000D4AAF /* Lenser.swift */; };
+		1E2F8A4B1F9CE3F0000D4AAF /* Lenser.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2F8A4A1F9CE3F0000D4AAF /* Lenser.generated.swift */; };
 		OBJ_23 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_29 /* LensKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* LensKitTests.swift */; };
-		OBJ_30 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* TestData.swift */; };
+		OBJ_30 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Example.swift */; };
 		OBJ_32 /* LensKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LensKit::LensKit::Product" /* LensKit.framework */; };
 		OBJ_39 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Lens.swift */; };
 		OBJ_40 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Operators.swift */; };
@@ -49,12 +50,13 @@
 
 /* Begin PBXFileReference section */
 		1E2F8A3E1F9CC6C9000D4AAF /* Lenser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lenser.swift; sourceTree = "<group>"; };
-		1E2F8A421F9CD396000D4AAF /* lens.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = lens.stencil; sourceTree = "<group>"; };
+		1E2F8A421F9CD396000D4AAF /* Lenser.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = Lenser.stencil; sourceTree = "<group>"; };
+		1E2F8A4A1F9CE3F0000D4AAF /* Lenser.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lenser.generated.swift; sourceTree = "<group>"; };
 		"LensKit::LensKit::Product" /* LensKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LensKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"LensKit::LensKitTests::Product" /* LensKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = LensKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		OBJ_13 /* LensKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LensKitTests.swift; sourceTree = "<group>"; };
-		OBJ_14 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_9 /* Lens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +83,7 @@
 		1E2F8A401F9CD298000D4AAF /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				1E2F8A421F9CD396000D4AAF /* lens.stencil */,
+				1E2F8A421F9CD396000D4AAF /* Lenser.stencil */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_13 /* LensKitTests.swift */,
-				OBJ_14 /* TestData.swift */,
+				1E2F8A4A1F9CE3F0000D4AAF /* Lenser.generated.swift */,
+				OBJ_14 /* Example.swift */,
 			);
 			name = LensKitTests;
 			path = Tests/LensKitTests;
@@ -235,7 +238,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_29 /* LensKitTests.swift in Sources */,
-				OBJ_30 /* TestData.swift in Sources */,
+				OBJ_30 /* Example.swift in Sources */,
+				1E2F8A4B1F9CE3F0000D4AAF /* Lenser.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
