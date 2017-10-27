@@ -34,19 +34,15 @@ let _company: Lens<Employee, Company> = Lens(get: { $0.company }, set: { Employe
 (_company >>> _address >>> _street >>> _name).modify(employee) { $0.capitalizedString } // Street
 ```
 
-## Code generation
+## Code generation with [Sourcery](https://github.com/krzysztofzablocki/Sourcery)
+By using [Scripts/generate-lenser.sh](Scripts/generate-lenser.sh), LensKit will support `lens-implementation` to auto-generate `extension YourClass: Lenser`.
 
-generate by [Sourcery](https://github.com/krzysztofzablocki/Sourcery#writing-templates)
-
-example.
-
-```shell
-$ sourcery --sources Tests/LensKitTests \
---templates Templates \
---output Tests/LensKitTests
+```bash
+# Usage: ./generate-lenser.sh <source_dir> <code-generated-dir>
+$ ./path/to/LensKit/Scripts/generate-lenser.sh ./Sources ./Sources/CodeGenerated/
 ```
 
-output file: [Lenser.generated.swift](https://github.com/to4iki/LensKit/blob/master/Tests/LensKitTests/Lenser.generated.swift)
+output file: [Lenser.generated.swift](Tests/LensKitTests/CodeGenerated/Lenser.generated.swift)
 
 ## Installation
 
