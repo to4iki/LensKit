@@ -18,8 +18,8 @@ public struct Lens<S, T> {
 
 // MARK: - Derived
 extension Lens {
-    public func modify(_ source: S, transform: (T) throws -> T) rethrows -> S {
-        return set(source, value: try transform(get(source)))
+    public func modify(_ source: S, value: (T) throws -> T) rethrows -> S {
+        return set(source, value: try value(get(source)))
     }
     
     public func compose<U>(_ other: Lens<T, U>) -> Lens<S, U> {
