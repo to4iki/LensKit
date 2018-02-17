@@ -2,14 +2,14 @@
 [![Build Status][status-image]][status-url]
 [![Carthage compatible][carthage-image]][carthage-url]
 
-a minimum Lens type, and code generation helper  
+a minimum Lens type, and code generation helper
 inspired by [lens](https://github.com/ekmett/lens)
 
 ## Overview
 
 [Monocle.Lens - elm-monocle](http://package.elm-lang.org/packages/arturopala/elm-monocle/latest/Monocle-Lens)
 
-> A Lens is a functional common problem: how to easily update a complex immutable structure,  
+> A Lens is a functional common problem: how to easily update a complex immutable structure,
 > for this purpose Lens acts as a zoom into a record.
 
 example.
@@ -35,14 +35,14 @@ let _company: Lens<Employee, Company> = Lens(get: { $0.company }, set: { Employe
 ```
 
 ## Code generation with [Sourcery](https://github.com/krzysztofzablocki/Sourcery)
-By using [Scripts/generate-lenser.sh](Scripts/generate-lenser.sh), LensKit will support `lens-implementation` to auto-generate `extension YourClass: Lenser`.
+By using [Scripts/generate-auto-lens.sh](Scripts/generate-auto-lens.sh), LensKit will support `lens-implementation` to auto-generate `extension YourClass: AutoLens`.
 
 ```bash
-# Usage: ./generate-lenser.sh <source_dir> <code-generated-dir>
-$ ./path/to/LensKit/Scripts/generate-lenser.sh ./Sources ./Sources/CodeGenerated/
+# Usage: ./generate-auto-lens.sh <source_dir> <code-generated-dir>
+$ ./path/to/LensKit/Scripts/generate-auto-lens.sh ./Sources ./Sources/Genes/
 ```
 
-output file: [Lenser.generated.swift](Tests/LensKitTests/CodeGenerated/Lenser.generated.swift)
+output file: [AutoLens.generated.swift](Tests/LensKitTests/Gens/AutoLens.generated.swift)
 
 ## Installation
 

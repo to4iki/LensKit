@@ -1,4 +1,4 @@
-{% for type in types.implementing.Lenser %}
+{% for type in types.implementing.AutoLens %}
 extension {{ type.name }} {
 {% for variable in type.variables %}
   static let {{ variable.name }}Lens = Lens<{{type.name}}, {{variable.typeName}}>(

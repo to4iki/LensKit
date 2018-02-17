@@ -1,11 +1,11 @@
 @testable import LensKit
 
 // sourcery do not resolve protocol from Source
-// error: Unknown type Lenser, should be used with `based`
-// -> define Protocol with the same name in Tests
-protocol Lenser {}
+// error: Unknown type AutoLens, should be used with `based`
+// NOTE: workaround define Protocol with the same name in Tests
+protocol AutoLens {}
 
-struct Street: Equatable, Lenser {
+struct Street: Equatable, AutoLens {
     let name: String
     
     static func == (lhs: Street, rhs: Street) -> Bool {
@@ -13,7 +13,7 @@ struct Street: Equatable, Lenser {
     }
 }
 
-struct Address: Equatable, Lenser {
+struct Address: Equatable, AutoLens {
     let street: Street
     
     static func == (lhs: Address, rhs: Address) -> Bool {
@@ -21,7 +21,7 @@ struct Address: Equatable, Lenser {
     }
 }
 
-struct Company: Equatable, Lenser {
+struct Company: Equatable, AutoLens {
     let address: Address
     
     static func == (lhs: Company, rhs: Company) -> Bool {
@@ -29,7 +29,7 @@ struct Company: Equatable, Lenser {
     }
 }
 
-struct Employee: Equatable, Lenser {
+struct Employee: Equatable, AutoLens {
     let company: Company
     
     static func == (lhs: Employee, rhs: Employee) -> Bool {
