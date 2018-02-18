@@ -1,3 +1,5 @@
+{% if not argument.internal %}import LensKit{% endif %}
+
 {% for type in types.implementing.AutoLens %}
 extension {{ type.name }} {
 {% for variable in type.variables %}
