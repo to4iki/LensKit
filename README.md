@@ -1,4 +1,5 @@
 # LensKit
+[![Swift 4.2][swift-image]][swift-url]
 [![Build Status][status-image]][status-url]
 [![Carthage compatible][carthage-image]][carthage-url]
 
@@ -61,6 +62,9 @@ dependencies: [
     .Package(url: "https://github.com/to4iki/LensKit.git", majorVersion: 0)
 ]
 ```
+
+[swift-url]: https://swift.org/download/
+[swift-image]: https://img.shields.io/badge/swift-4.2-orange.svg?style=flat
 
 [status-url]: https://travis-ci.org/to4iki/LensKit
 [status-image]: https://travis-ci.org/to4iki/LensKit.svg
